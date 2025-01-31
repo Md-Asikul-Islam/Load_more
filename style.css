@@ -13,35 +13,36 @@ html {
 body {
   font-family: "Poppins", sans-serif;
   background: #f0f8ff;
-  width: 100vw;
-  height: 100vh;
-  
 }
 
-.section{
+/* Section Styling */
+.section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.products-container {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(25rem, 2fr));
-  gap: 2rem;
   padding: 2rem;
 }
 
-.product{
-background: #ffffff;
-width: 25rem;
-height: 35rem;
-border-radius: 1.2rem;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-padding: 1.5rem;
-text-align: center;
-transition: transform 0.3s ease, box-shadow 0.3s ease;
-overflow: hidden;
+/* Product Grid Container */
+.products-container {
+  display: grid;
+  gap: 2rem;
+  padding: 2rem;
+  justify-content: center;
+}
+
+/* Product Card */
+.product {
+  background: #ffffff;
+  width: 100%;
+  max-width: 30rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
 }
 
 .product:hover {
@@ -49,10 +50,11 @@ overflow: hidden;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
-.product img{
+/* Product Image */
+.product img {
   width: 100%;
   max-width: 15rem;
-  height: 10rem;
+  height: auto;
   object-fit: cover;
   border-radius: 0.8rem;
   margin-bottom: 1rem;
@@ -63,46 +65,47 @@ overflow: hidden;
   transform: scale(1.05);
 }
 
-
-.product h3{
+/* Product Title */
+.product h3 {
   font-size: 1.8rem;
   color: #333;
   margin: 1rem 0;
 }
 
-
-.product p{
+/* Product Description */
+.product p {
   font-size: 1.4rem;
   color: #666;
   margin-bottom: 1rem;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 3; /* সর্বোচ্চ ৩ লাইন দেখাবে */
-  line-clamp: 3;
+  -webkit-line-clamp: 3; /* Show max 3 lines */
+  line-clamp: 3; /* Show max 3 lines */
   -webkit-box-orient: vertical;
 }
 
-.product .price{
+/* Product Price */
+.product .price {
   font-weight: bold;
   color: #e44d26;
   font-size: 1.6rem;
 }
 
-
+/* Load More Button */
 .load-more-btn {
   display: block;
   width: fit-content;
   margin: 20px auto;
   padding: 12px 24px;
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: bold;
   color: #fff;
   background: linear-gradient(45deg, #ff7e5f, #feb47b);
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -122,10 +125,43 @@ overflow: hidden;
   box-shadow: 0 0 5px rgba(255, 126, 95, 0.8);
 }
 
-
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (min-width: 475px) {
   .products-container {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(1, minmax(180px, 1fr));
+  }
+  .product{
+    width: 100%;
+    max-width: 38rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .products-container {
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+  }
+  .product{
+    width: 100%;
+    max-width: 34rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .products-container {
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+  }
+  .product{
+    width: 100%;
+    max-width: 32rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .products-container {
+    grid-template-columns: repeat(4, minmax(220px, 1fr));
+  }
+  .product{
+    width: 100%;
+    max-width: 30rem;
   }
 }
