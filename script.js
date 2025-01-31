@@ -1,21 +1,19 @@
-const productsContainer = document.querySelector(".products-container");
-const loadMoreBtn = document.querySelector(".load-more-btn");
+const products_container = document.querySelector(".products-container");
+
+const load_more_btn = document.querySelector(".load-more-btn")
 
 
-
-
-async function fetchListOfProducts(params) {
+async function fetchListOfProducs() {
   try {
     const response = await fetch("https://dummyjson.com/products", {
-      method : " GET"
+      method:"GET"
     });
 
-    const products = await response.json()
-    console.log(products);
+    const products = await response.json();
+    console.log(products)
   } catch (error) {
-    console.log(` Error fetching the products :${error}`)
+    console.log("Error fetching products:", error)
   }
 }
 
-
-fetchListOfProducts()
+fetchListOfProducs()
