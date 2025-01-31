@@ -21,7 +21,7 @@ function renderProducts(products) {
        <img src="${product.thumbnail}" alt="${product.title}" width="100">
         <h3>${product.title}</h3>
         <p>${product.description}</p>
-        <p>Price: $${product.price}</p>
+        <p class"price">Price: $${product.price}</p>
       </div>
   `
   ).join(" ");

@@ -19,3 +19,29 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+.product{
+background: #ffffff;
+border-radius: 1.2rem;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+padding: 1.5rem;
+text-align: center;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product img{
+
+}
+
+.product h3{
+
+}
+
+
+.product p{
+
+}
+
+.price{
+  
+}
