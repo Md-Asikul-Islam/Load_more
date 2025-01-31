@@ -60,6 +60,8 @@ transition: transform 0.3s ease, box-shadow 0.3s ease;
   margin-bottom: 1rem;
 }
 
-.price{
-
+.product .price{
+  font-weight: bold;
+  color: #e44d26;
+  font-size: 1.6rem;
 }
